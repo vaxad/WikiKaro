@@ -1,5 +1,6 @@
 import React from 'react'
 import getResults from '../lib/getResults'
+import Item from './components/item'
 
 type Props = {
     params:{
@@ -19,8 +20,8 @@ export async function generateMetadata({params:{searchTerm}}: Props) {
         }
     }
     return {
-        title : `${displayTerm}`,
-        description:`Search results for ${displayTerm}`
+        title : `${displayTerm} - Wikipedia`,
+        description:`Search results for ${displayTerm} on wikipedia`
     }
 }
 
@@ -33,7 +34,7 @@ export default async function SearchResults({params:{searchTerm}}: Props) {
         <main className='py-1'>
             {results?Object.values(results).map(result=>{
                 return (
-                    <p >{JSON.stringify(results)}</p>
+                    <Item key={result.pageid} result={result}/>
                 )
             })
         :

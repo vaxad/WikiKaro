@@ -8,6 +8,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  height: 100vh;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,10 +17,13 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-  body{
-    background-color: black;
-    color: antiquewhite;
-  }
+}
+body{
+  height: 100vh;
+  color: aliceblue;
+}
+#home{
+ height:100vh;
 }
 
 h1{
