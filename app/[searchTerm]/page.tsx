@@ -12,6 +12,7 @@ export async function generateMetadata({params:{searchTerm}}: Props) {
     const resData : Promise<SearchResult> = getResults(searchTerm)
     const data = await resData
 
+
     const displayTerm=searchTerm.replaceAll('%20',' ')
 
     if(!data?.query?.pages){

@@ -1,6 +1,5 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import Navbar from './components/Navbar'
 import localFont from '@next/font/local'
 
@@ -17,7 +16,6 @@ const monument = localFont({
   ],
   variable: '--font-monument'
 })
-const inter = Inter({ subsets: ['latin'], weight:'500' })
 
 export const metadata: Metadata = {
   title: 'WikiKaro - Home',
